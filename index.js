@@ -27,4 +27,7 @@ app.get('/tesouro-csv', async (req, res) => {
     }
 });
 
-module.exports = app;
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Proxy rodando na porta ${PORT}`);
+});
